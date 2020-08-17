@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::where('isAdmin', 0)->get();
+        return User::where('isAdmin', false)->get();
     }
 
     /**
@@ -24,14 +24,6 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        $user = new User();
-
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->email_verified_at = now();
-        $user->password = $request->password;
-
-        $user->save();
 
     }
 
@@ -43,7 +35,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->email_verified_at = now();
+        $user->password = $request->password;
+        $user->isAdmin = false;
+
+        $user->save();
+
+        return $user;
     }
 
     /**
