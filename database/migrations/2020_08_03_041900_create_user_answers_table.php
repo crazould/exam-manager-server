@@ -14,7 +14,12 @@ class CreateUserAnswersTable extends Migration
     public function up()
     {
         Schema::create('user_answers', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('question_id');
+            $table->foreign('user_id')->references('id')->on('users')
+            ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('question_id')->references('id')->on('questions')
+            ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
