@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTestHeadersTable extends Migration
+class CreateScheduleHeadersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateTestHeadersTable extends Migration
      */
     public function up()
     {
-        Schema::create('test_headers', function (Blueprint $table) {
+        Schema::create('schedule_headers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('status');
+            $table->unsignedInteger('test_id');
+            $table->foreign('test_id')->references('id')->on('test_headers')
+            ->onUpdate('cascade')->onDelete('cascade');
+            $table->dateTime('schedule_date');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateTestHeadersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('test_headers');
+        Schema::dropIfExists('schedule_headers');
     }
 }
