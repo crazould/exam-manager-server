@@ -18,7 +18,8 @@ class CreateScheduleHeadersTable extends Migration
             $table->unsignedInteger('test_id');
             $table->foreign('test_id')->references('id')->on('test_headers')
             ->onUpdate('cascade')->onDelete('cascade');
-            $table->dateTime('schedule_date');
+            $table->dateTime('start_time');
+            $table->dateTime('end_time');
             $table->timestamps();
         });
     }

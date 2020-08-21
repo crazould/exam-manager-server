@@ -84,8 +84,9 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
-
         $user->save();
+
+        return $user;
 
     }
 
