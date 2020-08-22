@@ -14,7 +14,7 @@ class ScheduleHeaderController extends Controller
      */
     public function index()
     {
-        //
+        return ScheduleHeader::all();
     }
 
     /**
@@ -24,7 +24,7 @@ class ScheduleHeaderController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +35,15 @@ class ScheduleHeaderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $scheduleHeader = new ScheduleHeader();
+
+        $scheduleHeader->test_id = $request->test_id;
+        $scheduleHeader->start_time = $request->start_time;
+        $scheduleHeader->end_time = $request->end_time;
+        $scheduleHeader->save();
+
+        return $scheduleHeader;
+
     }
 
     /**
@@ -46,7 +54,7 @@ class ScheduleHeaderController extends Controller
      */
     public function show(ScheduleHeader $scheduleHeader)
     {
-        //
+        
     }
 
     /**
@@ -57,7 +65,7 @@ class ScheduleHeaderController extends Controller
      */
     public function edit(ScheduleHeader $scheduleHeader)
     {
-        //
+        
     }
 
     /**
@@ -69,7 +77,7 @@ class ScheduleHeaderController extends Controller
      */
     public function update(Request $request, ScheduleHeader $scheduleHeader)
     {
-        //
+        
     }
 
     /**
