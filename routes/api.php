@@ -23,3 +23,6 @@ Route::post('participant', 'UserController@store');
 Route::get('participant/{id}', 'UserController@show');
 Route::put('participant/{id}', 'UserController@update');
 Route::delete('participant/{id}', 'UserController@destroy');
+
+Route::get('test-header', 'TestHeaderController@index');
+Route::post('test-header', 'TestHeaderController@store');

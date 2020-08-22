@@ -14,7 +14,7 @@ class TestHeaderController extends Controller
      */
     public function index()
     {
-        //
+        return TestHeader::all();
     }
 
     /**
@@ -24,7 +24,7 @@ class TestHeaderController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +35,13 @@ class TestHeaderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $testHeader = new TestHeader();
+
+        $testHeader->name = $request->name;
+        $testHeader->save();
+
+        return $testHeader;
+
     }
 
     /**
@@ -46,7 +52,7 @@ class TestHeaderController extends Controller
      */
     public function show(TestHeader $testHeader)
     {
-        //
+        
     }
 
     /**
@@ -57,7 +63,7 @@ class TestHeaderController extends Controller
      */
     public function edit(TestHeader $testHeader)
     {
-        //
+        
     }
 
     /**
@@ -69,7 +75,7 @@ class TestHeaderController extends Controller
      */
     public function update(Request $request, TestHeader $testHeader)
     {
-        //
+        
     }
 
     /**
@@ -80,6 +86,6 @@ class TestHeaderController extends Controller
      */
     public function destroy(TestHeader $testHeader)
     {
-        //
+        
     }
 }
