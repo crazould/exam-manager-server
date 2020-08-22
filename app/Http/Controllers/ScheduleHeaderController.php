@@ -37,9 +37,9 @@ class ScheduleHeaderController extends Controller
     {
         $scheduleHeader = new ScheduleHeader();
 
-        $scheduleHeader->test_id = $request->test_id;
-        $scheduleHeader->start_time = $request->start_time;
-        $scheduleHeader->end_time = $request->end_time;
+        $scheduleHeader->start_time = $request->startTime;
+        $scheduleHeader->end_time = $request->endTime;
+        $scheduleHeader->test_id = $request->test['id'];
         $scheduleHeader->save();
 
         return $scheduleHeader;
