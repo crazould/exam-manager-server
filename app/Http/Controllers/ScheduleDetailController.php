@@ -12,9 +12,10 @@ class ScheduleDetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        return ScheduleDetail::where('schedule_id', $id)->get();
+
     }
 
     /**
@@ -24,7 +25,7 @@ class ScheduleDetailController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +36,15 @@ class ScheduleDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $totalParticipant = count($request->participant);
+        $request = session()->get('request');
+        $scheduleDetail = new ScheduleDetail();
+
+        $scheduleDetail->schedule_id = $request->schedule_id;
+        $scheduleDetail->user_id = $request->participant[1]['id'];
+        $scheduleDetail->save();
+
+        return $scheduleDetail;
     }
 
     /**
@@ -46,7 +55,7 @@ class ScheduleDetailController extends Controller
      */
     public function show(ScheduleDetail $scheduleDetail)
     {
-        //
+        
     }
 
     /**
@@ -57,7 +66,7 @@ class ScheduleDetailController extends Controller
      */
     public function edit(ScheduleDetail $scheduleDetail)
     {
-        //
+        
     }
 
     /**
@@ -69,7 +78,7 @@ class ScheduleDetailController extends Controller
      */
     public function update(Request $request, ScheduleDetail $scheduleDetail)
     {
-        //
+        
     }
 
     /**
@@ -80,6 +89,6 @@ class ScheduleDetailController extends Controller
      */
     public function destroy(ScheduleDetail $scheduleDetail)
     {
-        //
+        
     }
 }

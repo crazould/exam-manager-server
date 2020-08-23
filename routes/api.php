@@ -29,3 +29,6 @@ Route::post('test-header', 'TestHeaderController@store');
 
 Route::get('schedule-header', 'ScheduleHeaderController@index');
 Route::post('schedule-header', 'ScheduleHeaderController@store');
+
+Route::get('schedule-detail/{id}', 'ScheduleDetailController@index');
+Route::post('schedule-detail', 'ScheduleDetailController@store')->name('schedule-detail-post');

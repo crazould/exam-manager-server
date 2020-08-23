@@ -42,7 +42,8 @@ class ScheduleHeaderController extends Controller
         $scheduleHeader->test_id = $request->test['id'];
         $scheduleHeader->save();
 
-        return $scheduleHeader;
+
+        return redirect()->route('schedule-detail-post')->with(['request' => $request->all()]) ;
 
     }
 

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 
-class UserController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::where('is_admin', false)->get();
+        //
     }
 
     /**
@@ -22,9 +21,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-
+        //
     }
 
     /**
@@ -35,17 +34,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User();
-
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->email_verified_at = now();
-        $user->password = $request->password;
-        $user->isAdmin = false;
-
-        $user->save();
-
-        return $user;
+        //
     }
 
     /**
@@ -56,7 +45,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return User::find($id);
+        //
     }
 
     /**
@@ -79,15 +68,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
-
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->save();
-
-        return $user;
-
+        //
     }
 
     /**
@@ -98,7 +79,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);
-        $user->delete();
+        //
     }
 }
