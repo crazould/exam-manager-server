@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\ScheduleHeader;
+use App\ScheduleDetail;
 use Illuminate\Http\Request;
 
 class ScheduleController extends Controller
@@ -13,7 +15,8 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        //
+        $schedule = ScheduleDetail::all();
+        return $schedule;
     }
 
     /**
