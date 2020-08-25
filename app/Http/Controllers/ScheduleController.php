@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\ScheduleHeader;
-use App\ScheduleDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ScheduleController extends Controller
 {
@@ -15,7 +14,14 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        $schedule = ScheduleDetail::all();
+        $schedule = DB::table('schedule_headers')
+                    ->join('schedule_details', 'schedule_headers.id', '=', 'schedule_details.schedule_id')
+                    ->select('*')
+                    ->get();
+
+        // $schedule = array($schedule);
+        // echo $schedule->count();
+
         return $schedule;
     }
 
