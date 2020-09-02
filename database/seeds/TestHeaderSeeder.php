@@ -11,6 +11,16 @@ class TestHeaderSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('test_headers')->insert([
+            [
+              'name' => 'Computer Vision', 
+            ],
+            [
+              'name' => 'Human and Computer Interaction', 
+            ],
+            [
+              'name' => 'Web Programming', 
+            ]
+        ]);
     }
 }
