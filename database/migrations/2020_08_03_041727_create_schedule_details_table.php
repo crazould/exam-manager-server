@@ -16,7 +16,7 @@ class CreateScheduleDetailsTable extends Migration
         Schema::create('schedule_details', function (Blueprint $table) {
             $table->unsignedInteger('schedule_id');
             $table->unsignedInteger('user_id');
-            $table->string('status');
+            $table->string('answer_status');
             $table->foreign('schedule_id')->references('id')->on('schedule_headers')
             ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')
