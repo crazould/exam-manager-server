@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\ScheduleDetail;
+use App\ScheduleHeader;
 
 class ScheduleController extends Controller
 {
@@ -15,12 +17,9 @@ class ScheduleController extends Controller
     public function index()
     {
         $schedule = DB::table('schedule_headers')
-                    ->join('schedule_details', 'schedule_headers.id', '=', 'schedule_details.schedule_id')
+                    ->join('test_headers', 'schedule_headers.test_id', '=', 'test_headers.id')
                     ->select('*')
                     ->get();
-
-        // $schedule = array($schedule);
-        // echo $schedule->count();
 
         return $schedule;
     }
@@ -43,7 +42,27 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $scheduleHeader = new ScheduleHeader();
+        
+        $scheduleHeader->start_time = $request->startTime;
+        $scheduleHeader->end_time = $request->endTime;
+        $scheduleHeader->test_id = $request->test['id'];
+        $scheduleHeader->save();
+
+        $totalParticipants = $request->totalParticipants;
+
+        for ($i = 0; $i < $totalParticipants; $i++){
+            
+            $scheduleDetail = new ScheduleDetail();
+            $scheduleDetail->schedule_id = $scheduleHeader->id;
+            $scheduleDetail->user_id = $request->participants[$i]['id'];
+            $scheduleDetail->answer_status = 'not done';
+            $scheduleDetail->save();
+
+        }
+
+        return $scheduleHeader->id;
+
     }
 
     /**
@@ -54,7 +73,7 @@ class ScheduleController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -65,7 +84,7 @@ class ScheduleController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -77,7 +96,7 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -88,6 +107,7 @@ class ScheduleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $schedule = ScheduleHeader::find($id);
+        $schedule->delete();
     }
 }
