@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\TestHeader;
 
 class TestController extends Controller
 {
@@ -13,7 +14,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -23,7 +24,7 @@ class TestController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -34,7 +35,12 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $testHeader = new TestHeader();
+        $testHeader->name = $request->name;
+
+        $testHeader->save();
+        
+        return $testHeader;
     }
 
     /**
@@ -45,7 +51,7 @@ class TestController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -56,7 +62,7 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -68,7 +74,7 @@ class TestController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
@@ -79,6 +85,6 @@ class TestController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }

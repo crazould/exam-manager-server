@@ -15,16 +15,22 @@ class ScheduleHeaderSeeder extends Seeder
         DB::table('schedule_headers')->insert([
             [
                 'test_id' => 1,
+                // 'start_time' => Carbon::create(2021, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
+                // 'end_time' => Carbon::create(2021, 4, 3, 10, 10, 0, 'Asia/Jakarta')
                 'start_time' => Carbon::create(2021, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
                 'end_time' => Carbon::create(2021, 4, 3, 10, 10, 0, 'Asia/Jakarta')
             ],
             [
                 'test_id' => 2,
+                // 'start_time' => Carbon::create(2020, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
+                // 'end_time' => Carbon::create(2020, 4, 3, 10, 10, 0, 'Asia/Jakarta')
                 'start_time' => Carbon::create(2020, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
                 'end_time' => Carbon::create(2020, 4, 3, 10, 10, 0, 'Asia/Jakarta')
             ],
             [
                 'test_id' => 3,
+                // 'start_time' => Carbon::create(2020, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
+                // 'end_time' => Carbon::create(2020, 4, 3, 10, 10, 0, 'Asia/Jakarta')
                 'start_time' => Carbon::create(2020, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
                 'end_time' => Carbon::create(2020, 4, 3, 10, 10, 0, 'Asia/Jakarta')
             ]

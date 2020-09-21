@@ -41,7 +41,7 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->email_verified_at = now();
         $user->password = $request->password;
-        $user->isAdmin = false;
+        $user->is_admin = false;
 
         $user->save();
 
