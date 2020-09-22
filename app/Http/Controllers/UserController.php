@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::where('is_admin', false)->get();
+        return User::where('isAdmin', false)->get();
     }
 
     /**
@@ -37,11 +37,11 @@ class UserController extends Controller
     {
         $user = new User();
 
-        $user->name = $request->name;
+        $user->username = $request->username;
         $user->email = $request->email;
         $user->email_verified_at = now();
         $user->password = $request->password;
-        $user->is_admin = false;
+        $user->isAdmin = false;
 
         $user->save();
 
@@ -67,7 +67,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -81,7 +81,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        $user->name = $request->name;
+        $user->username = $request->username;
         $user->email = $request->email;
         $user->password = $request->password;
         $user->save();

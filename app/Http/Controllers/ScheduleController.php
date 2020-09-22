@@ -16,12 +16,8 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        $schedule = DB::table('schedule_headers')
-                    ->join('test_headers', 'schedule_headers.test_id', '=', 'test_headers.id')
-                    ->select('*')
-                    ->get();
-
-        return $schedule;
+        
+        return ScheduleHeader::all();
     }
 
     /**
@@ -44,9 +40,9 @@ class ScheduleController extends Controller
     {
         $scheduleHeader = new ScheduleHeader();
         
-        $scheduleHeader->start_time = $request->start_time;
-        $scheduleHeader->end_time = $request->end_time;
-        $scheduleHeader->test_id = $request->test['id'];
+        $scheduleHeader->startTime = $request->startTime;
+        $scheduleHeader->endTime = $request->endTime;
+        $scheduleHeader->testName = $request->testName;
         $scheduleHeader->save();
 
         $totalParticipants = $request->totalParticipants;
@@ -54,9 +50,9 @@ class ScheduleController extends Controller
         for ($i = 0; $i < $totalParticipants; $i++){
             
             $scheduleDetail = new ScheduleDetail();
-            $scheduleDetail->schedule_id = $scheduleHeader->id;
-            $scheduleDetail->user_id = $request->participants[$i]['id'];
-            $scheduleDetail->answer_status = 'not done';
+            $scheduleDetail->scheduleID = $scheduleHeader->id;
+            $scheduleDetail->userID = $request->participants[$i]['id'];
+            $scheduleDetail->answerStatus = 'not done';
             $scheduleDetail->save();
 
         }

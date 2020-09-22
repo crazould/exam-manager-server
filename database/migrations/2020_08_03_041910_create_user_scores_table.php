@@ -14,11 +14,12 @@ class CreateUserScoresTable extends Migration
     public function up()
     {
         Schema::create('user_scores', function (Blueprint $table) {
-            $table->unsignedInteger('user_id');
-            $table->unsignedInteger('test_id');
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->unsignedInteger('userID');
+            $table->unsignedInteger('scheduleID');
+            $table->integer('score');
+            $table->foreign('userID')->references('id')->on('users')
             ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('test_id')->references('id')->on('test_headers')
+            $table->foreign('scheduleID')->references('id')->on('schedule_headers')
             ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

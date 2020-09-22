@@ -13,34 +13,34 @@ class ScheduleDetailSeeder extends Seeder
     {
         DB::table('schedule_details')->insert([
             [
-                'schedule_id' => 1,
-                'user_id' => 2,
-                'answer_status' => 'not done'
+                'scheduleID' => 1,
+                'userID' => 2,
+                'answerStatus' => 'not done'
             ],
             [
-                'schedule_id' => 1,
-                'user_id' => 3,
-                'answer_status' => 'not done'
+                'scheduleID' => 1,
+                'userID' => 3,
+                'answerStatus' => 'not done'
             ],
             [
-                'schedule_id' => 1,
-                'user_id' => 4,
-                'answer_status' => 'not done'
+                'scheduleID' => 1,
+                'userID' => 4,
+                'answerStatus' => 'not done'
             ],
             [
-                'schedule_id' => 2,
-                'user_id' => 2,
-                'answer_status' => 'submited'
+                'scheduleID' => 2,
+                'userID' => 2,
+                'answerStatus' => 'submited'
             ],
             [
-                'schedule_id' => 2,
-                'user_id' => 3,
-                'answer_status' => 'submited'
+                'scheduleID' => 2,
+                'userID' => 3,
+                'answerStatus' => 'submited'
             ],
             [
-                'schedule_id' => 3,
-                'user_id' => 2,
-                'answer_status' => 'finalized'
+                'scheduleID' => 3,
+                'userID' => 2,
+                'answerStatus' => 'finalized'
             ],
         ]);
     }

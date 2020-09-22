@@ -24,17 +24,11 @@ Route::get('participant/{id}', 'UserController@show');
 Route::put('participant/{id}', 'UserController@update');
 Route::delete('participant/{id}', 'UserController@destroy');
 
-Route::get('test', 'TestController@index');
-Route::post('test', 'TestController@store');
-
 Route::get('schedule', 'ScheduleController@index');
 Route::post('schedule', 'ScheduleController@store');
 Route::delete('schedule/{id}', 'ScheduleController@destroy');
 
 // Development
-
-Route::get('test-header', 'TestHeaderController@index');
-Route::post('test-header', 'TestHeaderController@store');
 
 Route::get('schedule-header', 'ScheduleHeaderController@index');
 Route::post('schedule-header', 'ScheduleHeaderController@store');

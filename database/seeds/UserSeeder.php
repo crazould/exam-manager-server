@@ -13,81 +13,81 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => 'emilia',
+                'username' => 'emilia',
                 'email' => 'emilia123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'emilia123', 
-                'is_admin' => true
+                'isAdmin' => true
             ],
             [
-                'name' => 'subaru',
+                'username' => 'subaru',
                 'email' => 'subaru123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'subaru123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'satella',
+                'username' => 'satella',
                 'email' => 'satella123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'satella123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'reinhart',
+                'username' => 'reinhart',
                 'email' => 'reinhart123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'reinhart123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'julius',
+                'username' => 'julius',
                 'email' => 'julius123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'julius123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'wilhem',
+                'username' => 'wilhem',
                 'email' => 'wilhem123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'wilhem123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'felix',
+                'username' => 'felix',
                 'email' => 'felix123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'felix123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'karsten',
+                'username' => 'karsten',
                 'email' => 'karsten123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'karsten123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'garfild',
+                'username' => 'garfild',
                 'email' => 'garfild123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'garfild123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'ryuzu',
+                'username' => 'ryuzu',
                 'email' => 'ryuzu123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'ryuzu123', 
-                'is_admin' => false
+                'isAdmin' => false
             ],
             [
-                'name' => 'roswalt',
+                'username' => 'roswalt',
                 'email' => 'roswalt123@gmail.com',
                 'email_verified_at' => now(),
                 'password' => 'roswalt123', 
-                'is_admin' => false
+                'isAdmin' => false
             ]
         ]);
 

@@ -14,12 +14,12 @@ class CreateScheduleDetailsTable extends Migration
     public function up()
     {
         Schema::create('schedule_details', function (Blueprint $table) {
-            $table->unsignedInteger('schedule_id');
-            $table->unsignedInteger('user_id');
-            $table->string('answer_status');
-            $table->foreign('schedule_id')->references('id')->on('schedule_headers')
+            $table->unsignedInteger('scheduleID');
+            $table->unsignedInteger('userID');
+            $table->string('answerStatus');
+            $table->foreign('scheduleID')->references('id')->on('schedule_headers')
             ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')
+            $table->foreign('userID')->references('id')->on('users')
             ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

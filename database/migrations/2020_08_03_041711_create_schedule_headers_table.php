@@ -15,11 +15,9 @@ class CreateScheduleHeadersTable extends Migration
     {
         Schema::create('schedule_headers', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('test_id');
-            $table->foreign('test_id')->references('id')->on('test_headers')
-            ->onUpdate('cascade')->onDelete('cascade');
-            $table->dateTime('start_time');
-            $table->dateTime('end_time');
+            $table->string('testName');
+            $table->dateTime('startTime');
+            $table->dateTime('endTime');
             $table->timestamps();
         });
     }
