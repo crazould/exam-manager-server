@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ScheduleHeader;
 
 class ScheduleHeaderController extends Controller
 {
@@ -13,7 +14,7 @@ class ScheduleHeaderController extends Controller
      */
     public function index()
     {
-        //
+        return ScheduleHeader::all();
     }
 
     /**
@@ -23,7 +24,7 @@ class ScheduleHeaderController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,7 +35,14 @@ class ScheduleHeaderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $scheduleHeader = new ScheduleHeader();
+        
+        $scheduleHeader->startTime = $request->startTime;
+        $scheduleHeader->endTime = $request->endTime;
+        $scheduleHeader->testName = $request->testName;
+        $scheduleHeader->save();
+
+        return $scheduleHeader;
     }
 
     /**
@@ -45,7 +53,7 @@ class ScheduleHeaderController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -56,7 +64,7 @@ class ScheduleHeaderController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -68,7 +76,7 @@ class ScheduleHeaderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
@@ -79,6 +87,7 @@ class ScheduleHeaderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $schedule = ScheduleHeader::find($id);
+        $schedule->delete();
     }
 }

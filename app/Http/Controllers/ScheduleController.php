@@ -16,8 +16,8 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        
-        return ScheduleHeader::all();
+            
+            return ScheduleHeader::all();
     }
 
     /**
@@ -57,7 +57,6 @@ class ScheduleController extends Controller
 
         }
 
-      
         return $scheduleHeader;
 
     }
