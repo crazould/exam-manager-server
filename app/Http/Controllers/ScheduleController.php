@@ -16,7 +16,7 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-            
+
             return ScheduleHeader::all();
     }
 
@@ -39,7 +39,7 @@ class ScheduleController extends Controller
     public function store(Request $request)
     {
         $scheduleHeader = new ScheduleHeader();
-        
+
         $scheduleHeader->startTime = $request->startTime;
         $scheduleHeader->endTime = $request->endTime;
         $scheduleHeader->testName = $request->testName;
@@ -48,7 +48,7 @@ class ScheduleController extends Controller
         $totalParticipants = $request->totalParticipants;
 
         for ($i = 0; $i < $totalParticipants; $i++){
-            
+
             $scheduleDetail = new ScheduleDetail();
             $scheduleDetail->scheduleID = $scheduleHeader->id;
             $scheduleDetail->userID = $request->participants[$i]['id'];

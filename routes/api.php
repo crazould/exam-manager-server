@@ -32,6 +32,7 @@ Route::delete('schedule/{id}', 'ScheduleController@destroy');
 
 Route::get('schedule-header', 'ScheduleHeaderController@index');
 Route::post('schedule-header', 'ScheduleHeaderController@store');
+Route::put('schedule-header/{id}', 'ScheduleHeaderController@update');
 Route::delete('schedule-header/{id}', 'ScheduleHeaderController@destroy');
 
 Route::get('schedule-detail', 'ScheduleDetailController@index');

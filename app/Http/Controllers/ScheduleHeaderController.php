@@ -36,7 +36,7 @@ class ScheduleHeaderController extends Controller
     public function store(Request $request)
     {
         $scheduleHeader = new ScheduleHeader();
-        
+
         $scheduleHeader->startTime = $request->startTime;
         $scheduleHeader->endTime = $request->endTime;
         $scheduleHeader->testName = $request->testName;
@@ -53,7 +53,7 @@ class ScheduleHeaderController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**
@@ -64,7 +64,7 @@ class ScheduleHeaderController extends Controller
      */
     public function edit($id)
     {
-        
+
     }
 
     /**
@@ -76,7 +76,15 @@ class ScheduleHeaderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $scheduleHeader = ScheduleHeader::find($id);
+
+        $scheduleHeader->testName = $request->testName;
+        $scheduleHeader->startTime = $request->startTime;
+        $scheduleHeader->endTime = $request->endTime;
+
+        $scheduleHeader->save();
+
+        return  $scheduleHeader;
     }
 
     /**

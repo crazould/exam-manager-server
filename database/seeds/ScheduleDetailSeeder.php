@@ -15,27 +15,27 @@ class ScheduleDetailSeeder extends Seeder
             [
                 'scheduleID' => 1,
                 'userID' => 2,
-                'answerStatus' => 'not done'
+                'answerStatus' => 'no file'
             ],
             [
                 'scheduleID' => 1,
                 'userID' => 3,
-                'answerStatus' => 'not done'
+                'answerStatus' => 'no file'
             ],
             [
                 'scheduleID' => 1,
                 'userID' => 4,
-                'answerStatus' => 'not done'
+                'answerStatus' => 'no file'
             ],
             [
                 'scheduleID' => 2,
                 'userID' => 2,
-                'answerStatus' => 'submited'
+                'answerStatus' => 'submitted'
             ],
             [
                 'scheduleID' => 2,
                 'userID' => 3,
-                'answerStatus' => 'submited'
+                'answerStatus' => 'submitted'
             ],
             [
                 'scheduleID' => 3,
