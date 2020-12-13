@@ -14,7 +14,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
+        return Question::all();
     }
 
     /**
@@ -24,7 +24,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +35,19 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $question = new Question();
+
+        $question->scheduleID = $request->scheduleID;
+        $question->questionTypeName = $request->type;
+        $question->questionName = $request->name;
+
+        if($request->type == 'multiple' || $request->type == 'choose' ){
+            $question->rightAnswer = $request->rightAnswer;
+        }
+
+        $question->save();
+
+        return $question;
     }
 
     /**

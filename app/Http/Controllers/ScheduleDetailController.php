@@ -37,22 +37,18 @@ class ScheduleDetailController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $scheduleDetails = collect([]);
 
         $totalParticipants = $request->totalParticipants;
 
         for ($i = 0; $i < $totalParticipants; $i++){
-            
             $scheduleDetail = new ScheduleDetail();
-
             $scheduleDetail->scheduleID = $request->scheduleID;
             $scheduleDetail->userID = $request->participants[$i]['id'];
-            $scheduleDetail->answerStatus = 'not done';
+            $scheduleDetail->answerStatus = 'not file';
             $scheduleDetail->save();
-
             $scheduleDetails->push($scheduleDetail);
-
         }
 
         return $scheduleDetails->all();
@@ -66,7 +62,7 @@ class ScheduleDetailController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**
@@ -77,7 +73,7 @@ class ScheduleDetailController extends Controller
      */
     public function edit($id)
     {
-        
+
     }
 
     /**
@@ -89,7 +85,7 @@ class ScheduleDetailController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
     }
 
     /**
@@ -100,6 +96,6 @@ class ScheduleDetailController extends Controller
      */
     public function destroy($id)
     {
-        
+
     }
 }

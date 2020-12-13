@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Question;
 use App\QuestionOption;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class QuestionOptionController extends Controller
      */
     public function index()
     {
-        //
+        return QuestionOption::all();
     }
 
     /**
@@ -35,7 +36,22 @@ class QuestionOptionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $questionOptions = collect([]);
+
+        $totalOptions = $request->totalOptions;
+
+        for ($i = 0; $i < $totalOptions; $i++){
+
+            $questionOption = new QuestionOption();
+            $questionOption->questionID = $request->questionID;
+            $questionOption->optionName = $request->questionOptions[$i];
+            $questionOption->save();
+            $questionOptions->push($questionOption);
+        }
+
+        return $questionOptions->all();
+
     }
 
     /**

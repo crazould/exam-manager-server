@@ -15,9 +15,12 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('scheduleID');
             $table->string('questionTypeName');
             $table->string('questionName');
             $table->string('rightAnswer')->nullable();
+            $table->foreign('scheduleID')->references('id')->on('schedule_headers')
+                ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
