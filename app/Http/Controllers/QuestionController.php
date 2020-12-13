@@ -58,7 +58,7 @@ class QuestionController extends Controller
      */
     public function show(Question $question)
     {
-        //
+
     }
 
     /**
@@ -69,7 +69,7 @@ class QuestionController extends Controller
      */
     public function edit(Question $question)
     {
-        //
+
     }
 
     /**
@@ -79,9 +79,12 @@ class QuestionController extends Controller
      * @param  \App\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Question $question)
+    public function update(Request $request, $id)
     {
-        //
+        $question = Question::find($id);
+        $question->questionName = $request->name;
+        $question->save();
+        return  $question;
     }
 
     /**
@@ -90,8 +93,10 @@ class QuestionController extends Controller
      * @param  \App\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Question $question)
+    public function destroy($id)
     {
-        //
+        $question = Question::find($id);
+        $question->delete();
+
     }
 }

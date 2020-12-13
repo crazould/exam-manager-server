@@ -15,18 +15,28 @@ class ScheduleHeaderSeeder extends Seeder
         DB::table('schedule_headers')->insert([
             [
                 'testName' => "Computer Vision",
-                'startTime' => Carbon::create(2021, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
-                'endTime' => Carbon::create(2021, 4, 3, 10, 10, 0, 'Asia/Jakarta')
+                'startTime' => Carbon::create(2020, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
+                'endTime' => Carbon::create(2020, 4, 3, 10, 10, 0, 'Asia/Jakarta')
             ],
             [
                 'testName' => "Computer Graphics",
-                'startTime' => Carbon::create(2020, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
-                'endTime' => Carbon::create(2020, 4, 3, 10, 10, 0, 'Asia/Jakarta')
+                'startTime' => Carbon::create(2020, 4, 5, 8, 0, 0, 'Asia/Jakarta'),
+                'endTime' => Carbon::create(2020, 4, 5, 10, 10, 0, 'Asia/Jakarta')
+            ],
+                        [
+                'testName' => "Bahasa Indonesia",
+                'startTime' => Carbon::create(2020, 5, 6, 8, 0, 0, 'Asia/Jakarta'),
+                'endTime' => Carbon::create(2020, 5, 6, 10, 10, 0, 'Asia/Jakarta')
+            ],
+                        [
+                'testName' => "English Savvy",
+                'startTime' => Carbon::create(2020, 6, 7, 8, 0, 0, 'Asia/Jakarta'),
+                'endTime' => Carbon::create(2020, 6, 7, 10, 10, 0, 'Asia/Jakarta')
             ],
             [
-                'testName' => "Computer Science",
-                'startTime' => Carbon::create(2020, 4, 3, 8, 0, 0, 'Asia/Jakarta'),
-                'endTime' => Carbon::create(2020, 4, 3, 10, 10, 0, 'Asia/Jakarta')
+                'testName' => "Multimedia Systems",
+                'startTime' => Carbon::create(2020, 7, 8, 8, 0, 0, 'Asia/Jakarta'),
+                'endTime' => Carbon::create(2020, 7, 8, 10, 10, 0, 'Asia/Jakarta')
             ]
         ]);
     }
