@@ -17,6 +17,7 @@ class CreateScheduleDetailsTable extends Migration
             $table->unsignedInteger('scheduleID');
             $table->unsignedInteger('userID');
             $table->string('answerStatus');
+            $table->integer('score')->default(0);
             $table->foreign('scheduleID')->references('id')->on('schedule_headers')
             ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('userID')->references('id')->on('users')
