@@ -16,83 +16,79 @@ class UserSeeder extends Seeder
                 'username' => 'emilia',
                 'email' => 'emilia123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'emilia123', 
+                'password' => 'emilia123',
                 'isAdmin' => true
             ],
             [
                 'username' => 'subaru',
                 'email' => 'subaru123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'subaru123', 
+                'password' => 'subaru123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'satella',
                 'email' => 'satella123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'satella123', 
+                'password' => 'satella123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'reinhart',
                 'email' => 'reinhart123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'reinhart123', 
+                'password' => 'reinhart123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'julius',
                 'email' => 'julius123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'julius123', 
+                'password' => 'julius123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'wilhem',
                 'email' => 'wilhem123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'wilhem123', 
+                'password' => 'wilhem123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'felix',
                 'email' => 'felix123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'felix123', 
+                'password' => 'felix123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'karsten',
                 'email' => 'karsten123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'karsten123', 
+                'password' => 'karsten123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'garfild',
                 'email' => 'garfild123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'garfild123', 
+                'password' => 'garfild123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'ryuzu',
                 'email' => 'ryuzu123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'ryuzu123', 
+                'password' => 'ryuzu123',
                 'isAdmin' => false
             ],
             [
                 'username' => 'roswalt',
                 'email' => 'roswalt123@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'roswalt123', 
+                'password' => 'roswalt123',
                 'isAdmin' => false
             ]
         ]);
-
-       
-        
-
     }
 }

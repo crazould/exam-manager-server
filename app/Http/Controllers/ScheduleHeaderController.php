@@ -40,6 +40,8 @@ class ScheduleHeaderController extends Controller
         $scheduleHeader->startTime = $request->startTime;
         $scheduleHeader->endTime = $request->endTime;
         $scheduleHeader->testName = $request->testName;
+        $scheduleHeader->testType = $request->testType;
+
         $scheduleHeader->save();
 
         return $scheduleHeader;
@@ -81,6 +83,7 @@ class ScheduleHeaderController extends Controller
         $scheduleHeader->testName = $request->testName;
         $scheduleHeader->startTime = $request->startTime;
         $scheduleHeader->endTime = $request->endTime;
+        $scheduleHeader->testType = $request->testType;
 
         $scheduleHeader->save();
 

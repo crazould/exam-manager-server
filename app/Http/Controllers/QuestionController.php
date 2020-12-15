@@ -38,10 +38,9 @@ class QuestionController extends Controller
         $question = new Question();
 
         $question->scheduleID = $request->scheduleID;
-        $question->questionTypeName = $request->type;
         $question->questionName = $request->name;
 
-        if($request->type == 'multiple' || $request->type == 'choose' ){
+        if($request->type == 'multiple' || $request->type == 'choose' || $request->type == 'true false' ){
             $question->rightAnswer = $request->rightAnswer;
         }
 

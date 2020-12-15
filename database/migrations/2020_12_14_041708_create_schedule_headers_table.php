@@ -16,6 +16,7 @@ class CreateScheduleHeadersTable extends Migration
         Schema::create('schedule_headers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('testName');
+            $table->string('testType');
             $table->dateTime('startTime');
             $table->dateTime('endTime');
             $table->timestamps();
