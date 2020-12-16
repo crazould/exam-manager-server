@@ -29,23 +29,71 @@ class QuestionOptionSeeder extends Seeder
                 'optionName' => 'Food'
             ],
             [
+                'questionID' => 2,
+                'optionName' => 'Audio Processing'
+            ],
+            [
+                'questionID' => 2,
+                'optionName' => 'Digital Image Processing'
+            ],
+            [
+                'questionID' => 2,
+                'optionName' => 'Big Data processing'
+            ],
+            [
+                'questionID' => 2,
+                'optionName' => 'Small Data processing'
+            ],
+            [
                 'questionID' => 3,
+                'optionName' => 'Ancestor Interest'
+            ],
+            [
+                'questionID' => 3,
+                'optionName' => 'Another Insect'
+            ],
+            [
+                'questionID' => 3,
+                'optionName' => 'Artificial Intelligence'
+            ],
+            [
+                'questionID' => 3,
+                'optionName' => 'Alive Intergalactic'
+            ],
+            [
+                'questionID' => 4,
+                'optionName' => 'stdio.h'
+            ],
+            [
+                'questionID' => 4,
+                'optionName' => 'Bootstrap'
+            ],
+            [
+                'questionID' => 4,
+                'optionName' => 'Jquery'
+            ],
+            [
+                'questionID' => 4,
+                'optionName' => 'OpenCV'
+            ],
+            [
+                'questionID' => 6,
                 'optionName' => 'Amerika'
             ],
             [
-                'questionID' => 3,
+                'questionID' => 6,
                 'optionName' => 'Belanda'
             ],
             [
-                'questionID' => 3,
+                'questionID' => 6,
                 'optionName' => 'Jepang'
             ],
             [
-                'questionID' => 3,
+                'questionID' => 6,
                 'optionName' => 'Indonesia'
             ],
             [
-                'questionID' => 3,
+                'questionID' => 6,
                 'optionName' => 'Swedia'
             ],
         ]);

@@ -14,8 +14,23 @@ class QuestionSeeder extends Seeder
         DB::table('questions')->insert([
             [
                 'scheduleID' => 1,
-                'questionName' => 'what is computer vision about ?',
+                'questionName' => 'What is computer vision about ?',
                 'rightAnswer' => 'Machine Learning'
+            ],
+            [
+                'scheduleID' => 1,
+                'questionName' => 'What distinguished computer vision from other AI field ?',
+                'rightAnswer' => 'Digital Image Processing'
+            ],
+            [
+                'scheduleID' => 1,
+                'questionName' => 'What is AI stand for ?',
+                'rightAnswer' => 'Artificial Intelligence'
+            ],
+            [
+                'scheduleID' => 1,
+                'questionName' => 'What is common library that is used in computer vision ?',
+                'rightAnswer' => 'OpenCV'
             ],
             [
                 'scheduleID' => 2,

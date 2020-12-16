@@ -55,7 +55,6 @@ class ScheduleHeaderController extends Controller
      */
     public function show($id)
     {
-
     }
 
     /**
