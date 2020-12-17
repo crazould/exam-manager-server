@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
 use App\ScheduleDetail;
+use Illuminate\Support\Facades\DB;
 
 class ScheduleDetailController extends Controller
 {
@@ -73,7 +74,6 @@ class ScheduleDetailController extends Controller
      */
     public function edit($id)
     {
-
     }
 
     /**
@@ -85,6 +85,27 @@ class ScheduleDetailController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $detail = DB::table('schedule_details')
+            ->where('scheduleID', $request->scheduleID)
+            ->where('userID', $id);
+
+        if($request->answerStatus == 'no file'){
+            $detail->update([
+                'score' => $request->score,
+                'answerStatus' => 'submitted'
+            ]);
+        }
+        elseif ($request->answerStatus == 'not yet graded'){
+            $detail->update([
+                'answerStatus' => 'not yet graded',
+                'score' => 0
+            ]);
+        }
+        else{
+            $detail->update([
+                'score' => $request->score
+            ]);
+        }
 
     }
 

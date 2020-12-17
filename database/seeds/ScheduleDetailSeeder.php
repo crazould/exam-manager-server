@@ -15,20 +15,20 @@ class ScheduleDetailSeeder extends Seeder
             [
                 'scheduleID' => 1,
                 'userID' => 2,
-                'answerStatus' => 'submitted',
-                'score' => 100
+                'answerStatus' => 'no file',
+                'score' => 0
             ],
             [
                 'scheduleID' => 1,
                 'userID' => 3,
-                'answerStatus' => 'submitted',
-                'score' => 75
+                'answerStatus' => 'no file',
+                'score' => 0
             ],
             [
                 'scheduleID' => 1,
                 'userID' => 4,
-                'answerStatus' => 'submitted',
-                'score' => 95
+                'answerStatus' => 'no file',
+                'score' => 0
             ],
             [
                 'scheduleID' => 2,
@@ -39,13 +39,25 @@ class ScheduleDetailSeeder extends Seeder
             [
                 'scheduleID' => 2,
                 'userID' => 3,
-                'answerStatus' => 'submitted',
-                'score' => 85
+                'answerStatus' => 'no file',
+                'score' => 0
+            ],
+            [
+                'scheduleID' => 3,
+                'userID' => 3,
+                'answerStatus' => 'no file',
+                'score' => 0
+            ],
+            [
+                'scheduleID' => 4,
+                'userID' => 3,
+                'answerStatus' => 'no file',
+                'score' => 0
             ],
             [
                 'scheduleID' => 3,
                 'userID' => 4,
-                'answerStatus' => 'finalized',
+                'answerStatus' => 'submitted',
                 'score' => 30
             ],
             [
@@ -63,7 +75,7 @@ class ScheduleDetailSeeder extends Seeder
             [
                 'scheduleID' => 5,
                 'userID' => 3,
-                'answerStatus' => 'not yet graded',
+                'answerStatus' => 'no file',
                 'score' => 0
             ],
         ]);

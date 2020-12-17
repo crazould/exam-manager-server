@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\UserAnswer;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class UserAnswerController extends Controller
      */
     public function index()
     {
-        //
+        return UserAnswer::all();
     }
 
     /**
@@ -24,7 +25,7 @@ class UserAnswerController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +36,21 @@ class UserAnswerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $userAnswers = collect([]);
+
+        $totalAnswers = $request->totalAnswers;
+
+        for ($i = 0; $i < $totalAnswers; $i++){
+
+            $userAnswer = new UserAnswer();
+            $userAnswer->questionID = $request->questionID[$i];
+            $userAnswer->userID = $request->userID[$i];
+            $userAnswer->answer = $request->answer[$i];
+            $userAnswer->save();
+            $userAnswers->push($userAnswer);
+        }
+
+        return $userAnswers->all();
     }
 
     /**

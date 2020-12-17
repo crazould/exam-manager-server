@@ -77,24 +77,64 @@ class QuestionOptionSeeder extends Seeder
                 'optionName' => 'OpenCV'
             ],
             [
-                'questionID' => 6,
+                'questionID' => 10,
                 'optionName' => 'Amerika'
             ],
             [
-                'questionID' => 6,
+                'questionID' => 10,
                 'optionName' => 'Belanda'
             ],
             [
-                'questionID' => 6,
+                'questionID' => 10,
                 'optionName' => 'Jepang'
             ],
             [
-                'questionID' => 6,
+                'questionID' => 10,
                 'optionName' => 'Indonesia'
             ],
             [
-                'questionID' => 6,
+                'questionID' => 10,
                 'optionName' => 'Swedia'
+            ],
+            [
+                'questionID' => 11,
+                'optionName' => 'Austronesia'
+            ],
+            [
+                'questionID' => 11,
+                'optionName' => 'Melayu'
+            ],
+            [
+                'questionID' => 11,
+                'optionName' => 'Austrik'
+            ],
+            [
+                'questionID' => 11,
+                'optionName' => 'Austro-Asiatik'
+            ],
+            [
+                'questionID' => 11,
+                'optionName' => 'jawa'
+            ],
+            [
+                'questionID' => 11,
+                'optionName' => 'sunda'
+            ],
+            [
+                'questionID' => 11,
+                'optionName' => 'batak'
+            ],
+            [
+                'questionID' => 12,
+                'optionName' => 'Setelah Sumpah Pemuda'
+            ],
+            [
+                'questionID' => 12,
+                'optionName' => 'Setelah Hari Pancasila'
+            ],
+            [
+                'questionID' => 12,
+                'optionName' => 'Setelah Proklamasi Kemerdekaan Indonesia'
             ],
         ]);
     }

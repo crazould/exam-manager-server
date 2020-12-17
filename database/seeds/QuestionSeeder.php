@@ -34,13 +34,43 @@ class QuestionSeeder extends Seeder
             ],
             [
                 'scheduleID' => 2,
-                'questionName' => 'is computer graphics use computer ?',
+                'questionName' => 'Is computer graphics use computer for research ?',
+                'rightAnswer' => 'true'
+            ],
+            [
+                'scheduleID' => 2,
+                'questionName' => 'Is computer graphics is the branch of Computer Science ?',
+                'rightAnswer' => 'true'
+            ],
+            [
+                'scheduleID' => 2,
+                'questionName' => 'Is computer graphics not use computer for research ?',
+                'rightAnswer' => 'false'
+            ],
+            [
+                'scheduleID' => 2,
+                'questionName' => 'Is computer graphics is the branch of Artificial Intelligence ?',
+                'rightAnswer' => 'false'
+            ],
+            [
+                'scheduleID' => 2,
+                'questionName' => 'Is Computer graphics deals with generating images ?',
                 'rightAnswer' => 'true'
             ],
             [
                 'scheduleID' => 3,
                 'questionName' => 'Di negara mana bahasa indonesia menjadi bahasa utama ?',
                 'rightAnswer' => 'Indonesia'
+            ],
+            [
+                'scheduleID' => 3,
+                'questionName' => 'Bahasa Indonesia adalah salah satu dari banyak varietas bahasa ?',
+                'rightAnswer' => 'Melayu'
+            ],
+            [
+                'scheduleID' => 3,
+                'questionName' => 'Kapan Bahasa Indonesia diresmikan penggunaannya ?',
+                'rightAnswer' => 'Setelah Proklamasi Kemerdekaan Indonesia'
             ],
             [
                 'scheduleID' => 4,
