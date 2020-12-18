@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('participant', 'UserController@index');
 Route::post('participant', 'UserController@store');
-Route::get('participant/{id}', 'UserController@show');
+Route::post('participant/login', 'UserController@login');
 Route::put('participant/{id}', 'UserController@update');
 Route::delete('participant/{id}', 'UserController@destroy');
 
@@ -44,6 +44,7 @@ Route::delete('question/{id}', 'QuestionController@destroy');
 
 Route::get('user-answer', 'UserAnswerController@index');
 Route::post('user-answer', 'UserAnswerController@store');
+Route::post('user-answer-file/{userID}/{questionID}', 'UserAnswerController@storeFile');
 Route::put('user-answer/{id}', 'UserAnswerController@update');
 Route::delete('user-answer/{id}', 'UserAnswerController@destroy');
 
@@ -51,10 +52,6 @@ Route::get('question-option', 'QuestionOptionController@index');
 Route::post('question-option', 'QuestionOptionController@store');
 Route::delete('question-option/{id}', 'QuestionOptionController@destroy');
 
-// Unused
-Route::get('schedule', 'ScheduleController@index');
-Route::post('schedule', 'ScheduleController@store');
-Route::delete('schedule/{id}', 'ScheduleController@destroy');
 
 
 

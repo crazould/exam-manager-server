@@ -13,24 +13,24 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'username' => 'emilia',
-                'email' => 'emilia123@gmail.com',
+                'username' => 'admin',
+                'email' => 'admin@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'emilia123',
+                'password' => 'admin',
                 'isAdmin' => true
             ],
             [
-                'username' => 'subaru',
-                'email' => 'subaru123@gmail.com',
+                'username' => 'student2',
+                'email' => 'student2@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'subaru123',
+                'password' => 'student2',
                 'isAdmin' => false
             ],
             [
-                'username' => 'satella',
-                'email' => 'satella123@gmail.com',
+                'username' => 'student',
+                'email' => 'student@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'satella123',
+                'password' => 'student',
                 'isAdmin' => false
             ],
             [

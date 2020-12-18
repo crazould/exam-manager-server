@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\UserAnswer;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 class UserAnswerController extends Controller
 {
@@ -41,7 +42,6 @@ class UserAnswerController extends Controller
         $totalAnswers = $request->totalAnswers;
 
         for ($i = 0; $i < $totalAnswers; $i++){
-
             $userAnswer = new UserAnswer();
             $userAnswer->questionID = $request->questionID[$i];
             $userAnswer->userID = $request->userID[$i];
@@ -51,6 +51,21 @@ class UserAnswerController extends Controller
         }
 
         return $userAnswers->all();
+    }
+
+    public function storeFile(Request $request, $userID, $questionID)
+    {
+        $userAnswer = new UserAnswer();
+
+        $userAnswer->questionID = $questionID;
+        $userAnswer->userID = $userID;
+
+        $answer_path = $request->file('file0')->store('fileAnswer', 'public');
+
+        $userAnswer->answer = $answer_path;
+        $userAnswer->save();
+
+        return $userAnswer;
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -42,9 +43,17 @@ class UserController extends Controller
         $user->email_verified_at = now();
         $user->password = $request->password;
         $user->isAdmin = false;
-
         $user->save();
 
+        return $user;
+    }
+
+    public function login(Request $request)
+    {
+        $user = DB::table('users')
+                ->where('email', $request->email )
+                ->where('password', $request->password)
+                ->get();
         return $user;
     }
 
