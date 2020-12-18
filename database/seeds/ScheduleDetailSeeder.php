@@ -78,6 +78,18 @@ class ScheduleDetailSeeder extends Seeder
                 'answerStatus' => 'no file',
                 'score' => 0
             ],
+            [
+                'scheduleID' => 6,
+                'userID' => 3,
+                'answerStatus' => 'no file',
+                'score' => 0
+            ],
+            [
+                'scheduleID' => 7,
+                'userID' => 3,
+                'answerStatus' => 'no file',
+                'score' => 0
+            ]
         ]);
     }
 }
